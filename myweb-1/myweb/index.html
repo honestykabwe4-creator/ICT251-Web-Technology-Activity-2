@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Student Portfolio | ICT251 Web Technologies, Mulungushi University</title>
+  <meta name="description" content="Personal multimedia website of a Mulungushi University student: about me, hobbies, learning plan, photos, video and audio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header id="top-of-page">
+  <nav aria-label="Main navigation">
+    <a class="brand" href="#top-of-page">My Portfolio</a>
+    <ul id="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#plan">Learning Plan</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener">Learn web development (MDN)</a></li>
+    </ul>
+    <div class="tools">
+      <button class="icon-btn" id="theme" aria-label="Switch between light and dark mode">🌓</button>
+      <button class="icon-btn" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+    </div>
+  </nav>
+  <div class="hero">
+    <h1>Hello, I'm Honesty </h1>
+    <p>A Computer Science student at Mulungushi University learning to build fast, friendly website. With great passion i strongly believe that i will learn great a skill</p>
+    <a class="btn" href="#photos">Explore photos</a>
+    <a class="btn ghost" href="#media">Watch my video</a>
+    <a class="btn ghost" href="#media">Listen to audio</a>
+  </div>
+</header>
+
+<main>
+  <section id="about" class="content-section">
+    <h2>About Me</h2>
+    <p>My name is Honesty Kabwe a second year student studying Computer Science at Mulungushi University in Zambia. I enjoy turning ideas into things people can actually click, watch and use. This website is my second step in ICT251 Web Technologies, where I am learning how HTML gives a page its structure and how CSS gives it personality. I like meeting new people, staying curious, and practising a little every day. My goal is to build clean, accessible websites that load quickly on any phone and help my community find useful information.</p>
+  </section>
+
+  <section id="hobbies" class="content-section">
+    <h2>My Hobbies</h2>
+    <ul>
+      <li>Reading</li>
+      <li>Listening to music</li>
+      <li>Coding</li>
+
+    </ul>
+  </section>
+
+  <section id="plan" class="content-section">
+    <h2>My Learning Plan</h2>
+    <div class="two">
+      <div>
+        <h3>Steps to improve my web skills</h3>
+        <ol>
+          <li>Finish every ICT251 activity and rebuild each page from memory.</li>
+          <li>Complete one MDN web development lesson each week.</li>
+          <li>Build and publish a small project on GitHub Pages, then ask classmates for feedback.</li>
+        </ol>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption>Weekly web learning plan</caption>
+          <thead><tr><th scope="col">Day</th><th scope="col">Topic</th><th scope="col">Practice task</th></tr></thead>
+          <tbody>
+            <tr><td>Monday</td><td>HTML structure</td><td>Rebuild the header and footer</td></tr>
+            <tr><td>Wednesday</td><td>CSS layout</td><td>Make the gallery a responsive grid</td></tr>
+            <tr><td>Friday</td><td>Forms and accessibility</td><td>Test labels and keyboard navigation</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="photos" class="content-section">
+    <h2>My Photos</h2>
+    <div class="filters">
+      <button class="chip on" data-cat="all">All</button>
+      <button class="chip" data-cat="campus">Campus</button>
+      <button class="chip" data-cat="casual">Casual</button>
+      <button class="chip" data-cat="fav" aria-label="Show favourites only">♥ Favourites</button>
+      <label for="search" class="sr" style="position:absolute;left:-9999px">Search photos</label>
+      <input id="search" type="search" placeholder="Search photos…">
+    </div>
+    <div class="gallery" id="gallery">
+      <figure data-cat="campus" data-id="p1">
+        <img src="images/photo1.jpg" alt="Smiling student in a light blue checked shirt and sunglasses standing beside a glass wall on campus" loading="lazy" width="1200" height="1300">
+        <button class="fav" aria-pressed="false" aria-label="Favourite photo 1">♥</button>
+        <figcaption><b>On campus</b>Standing by the glass walkway between lecture buildings. September 2026.</figcaption>
+      </figure>
+      <figure data-cat="casual" data-id="p2">
+        <img src="images/photo2.jpg" alt="Student in a black T-shirt and silver chain smiling with hands clasped in front, under a bright blue sky" loading="lazy" width="951" height="1800">
+        <button class="fav" aria-pressed="false" aria-label="Favourite photo 2">♥</button>
+        <figcaption><b>Sunny afternoon</b>A relaxed portrait outdoors after class. September 2026.</figcaption>
+      </figure>
+      <figure data-cat="casual" data-id="p3">
+        <img src="images/photo3.jpg" alt="Student in a black T-shirt and glasses standing with hands on hips in a dry grassy field" loading="lazy" width="814" height="1620">
+        <button class="fav" aria-pressed="false" aria-label="Favourite photo 3">♥</button>
+        <figcaption><b>Out in the field</b>Taking a break outside on a warm, dry day. September 2026.</figcaption>
+      </figure>
+    </div>
+    <p class="note">All photos were taken by me or friends who agreed to share them. Click a photo to enlarge it.</p>
+  </section>
+
+  <section id="media" class="content-section">
+    <h2>My Media</h2>
+    <div class="two">
+      <div>
+        <h3>Video introduction</h3>
+        <div class="player">
+          <video id="vid" controls preload="metadata" poster="images/photo1.jpg">
+            <source src="videos/intro.mp4" type="video/mp4">
+            Your browser does not support the video tag. Please read the summary below.
+          </video>
+        </div>
+        <p>A short hello: who I am, what I study and the web skill I most want to learn.</p>
+        <p class="count">Plays: <span id="vidCount">0</span></p>
+        <details open>
+          <summary>Written summary (no sound needed)</summary>
+          <p>I introduce myself as Honesty Kabwe, a Computer Science student at Mulungushi University, and say that the web skill I hope to learn is wed technologies.</p>
+        </details>
+      </div>
+      <div>
+        <h3>Audio clip</h3>
+        <audio id="aud" controls preload="none">
+          <source src="videos/voice.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <p>In this 23-second recording I introduce myself and share why I am studying web technologies. Press play to listen and pause at any time.</p>
+        <p class="count">Plays: <span id="audCount">0</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="content-section">
+    <h2>Contact</h2>
+    <form action="#" id="contactForm">
+      <div><label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
+      <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+      <div><label for="topic">Topic</label>
+        <select id="topic" name="topic"><option>Say hello</option><option>Web project</option><option>Study group</option><option>Other</option></select></div>
+      <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+      <button type="submit">Send message</button>
+      <p id="status" role="status"></p>
+      <p class="note">This form is a browser demonstration only. It does not send or store any data.</p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <form class="news" action="#" id="newsForm">
+    <label for="nl" style="position:absolute;left:-9999px">Newsletter email</label>
+    <input id="nl" type="email" placeholder="Email for updates" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p id="nlStatus" role="status"></p>
+  <p>Learn more at <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener">MDN Learn Web Development</a></p>
+  <p>&copy; 2026 </p>
+</footer>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="icon-btn" id="close" aria-label="Close photo">✕</button>
+  <img id="lbImg" src="" alt=""><p id="lbCap"></p>
+</div>
+<button class="icon-btn" id="top" aria-label="Scroll to top">↑</button>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+// Theme
+const root=document.documentElement;
+root.dataset.theme=store.get('theme',matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+$('#theme').onclick=()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';store.set('theme',root.dataset.theme)};
+
+// Mobile menu
+const burger=$('#burger'),menu=$('#menu');
+burger.onclick=()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)};
+$$('#menu a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
+
+// Gallery: filter, search, favourites
+let cat='all',favs=store.get('favs',[]);
+const figs=$$('#gallery figure');
+function apply(){
+  const q=$('#search').value.toLowerCase();
+  figs.forEach(f=>{
+    const okCat=cat==='all'||(cat==='fav'?favs.includes(f.dataset.id):f.dataset.cat===cat);
+    f.hidden=!(okCat&&f.textContent.toLowerCase().includes(q)||okCat&&f.querySelector('img').alt.toLowerCase().includes(q));
+  });
+}
+$$('.chip').forEach(c=>c.onclick=()=>{$$('.chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');cat=c.dataset.cat;apply()});
+$('#search').oninput=apply;
+figs.forEach(f=>{
+  const b=$('.fav',f),on=favs.includes(f.dataset.id);b.setAttribute('aria-pressed',on);
+  b.onclick=()=>{const id=f.dataset.id;favs=favs.includes(id)?favs.filter(x=>x!==id):[...favs,id];store.set('favs',favs);b.setAttribute('aria-pressed',favs.includes(id));apply()};
+});
+
+// Lightbox
+const lb=$('#lightbox');
+figs.forEach(f=>$('img',f).onclick=()=>{$('#lbImg').src=$('img',f).src;$('#lbImg').alt=$('img',f).alt;$('#lbCap').textContent=$('figcaption',f).textContent;lb.classList.add('open');$('#close').focus()});
+const closeLb=()=>lb.classList.remove('open');
+$('#close').onclick=closeLb;lb.onclick=e=>{if(e.target===lb)closeLb()};
+addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
+
+// Play counters
+[['vid','vidCount'],['aud','audCount']].forEach(([m,c])=>{
+  const el=$('#'+m),out=$('#'+c);out.textContent=store.get(m,0);
+  el.addEventListener('play',()=>{const n=store.get(m,0)+1;store.set(m,n);out.textContent=n});
+});
+$('#vid').addEventListener('play',()=>$('#aud').pause());
+$('#aud').addEventListener('play',()=>$('#vid').pause());
+
+// Forms (demo only)
+$('#contactForm').addEventListener('submit',e=>{e.preventDefault();$('#status').textContent='Thanks! This demo form did not send anything.';e.target.reset()});
+$('#newsForm').addEventListener('submit',e=>{e.preventDefault();$('#nlStatus').textContent='Subscribed (demo only, nothing was saved).';e.target.reset()});
+
+// Scroll to top
+const topBtn=$('#top');
+addEventListener('scroll',()=>topBtn.classList.toggle('show',scrollY>600),{passive:true});
+topBtn.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+</script>
+</body>
+</html>
