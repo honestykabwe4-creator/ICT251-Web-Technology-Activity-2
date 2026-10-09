@@ -184,7 +184,7 @@ burger.onclick=()=>{const o=menu.classList.toggle('open');burger.setAttribute('a
 $$('#menu a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
 
 // Gallery: filter, search, favourites
-let cat='all',favs=store.get('favs',[]);
+let cat='all',favs=st74ore.get('favs',[]);
 const figs=$$('#gallery figure');
 function apply(){
   const q=$('#search').value.toLowerCase();
