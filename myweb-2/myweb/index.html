@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Student Portfolio | ICT251 Web Technologies, Mulungushi University</title>
+  <meta name="description" content="Interactive personal portfolio of a Mulungushi University Computer Science student: projects, photos, video, audio and contact form.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+<header id="top-of-page">
+  <nav aria-label="Main navigation">
+    <a class="brand" href="#top-of-page">My Portfolio</a>
+    <ul id="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#plan">Learning Plan</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener">Learn web dev (MDN)</a></li>
+    </ul>
+    <div class="tools">
+      <button class="icon-btn" id="theme" type="button" aria-pressed="false" aria-label="Dark mode">🌓</button>
+      <button class="icon-btn" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+    </div>
+  </nav>
+  <div class="hero">
+   <h1>Hi, I'm Honesty Kabwe</h1>
+    <p>I am a student,studying Computer Science and learning to build fast, friendly websites . Take a look at what I have made so far.</p>
+    <a class="btn" href="#projects">View My Projects</a>
+    <a class="btn ghost" href="#photos">See my photos</a>
+    <a class="btn ghost" href="#media">Watch and listen</a>
+  </div>
+</header>
+
+<main>
+  <section id="about" class="content-section">
+    <h2>About Me</h2>
+    <p>My name is Honesty Kabwe and I am studying Computer Science at Mulungushi University in Zambia. I enjoy turning ideas into things people can actually click, watch and use.I am currently learning how HTML gives a page its structure, how CSS gives it personality and how JavaScript makes it respond to people. I like meeting new people, staying curious, and practising a little every day. My goal is to build clean, accessible websites that load quickly on any phone and help my community find useful information.</p>
+  </section>
+
+  <section id="hobbies" class="content-section">
+    <h2>My Hobbies</h2>
+    <ul>
+      <li>Reading</li>
+      <li>Football</li>
+      <li>Coding</li>
+    </ul>
+  </section>
+
+  <section id="plan" class="content-section">
+    <h2>My Learning Plan</h2>
+    <div class="two">
+      <div>
+        <h3>Steps to improve my web skills</h3>
+        <ol>
+          <li>Finish every ICT251 activity and rebuild each page from memory.</li>
+          <li>Complete one MDN web development lesson each week.</li>
+          <li>Publish a small project on GitHub and ask classmates for feedback.</li>
+        </ol>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption>Weekly web learning plan</caption>
+          <thead><tr><th scope="col">Day</th><th scope="col">Topic</th><th scope="col">Practice task</th></tr></thead>
+          <tbody>
+            <tr><td>Monday</td><td>HTML structure</td><td>Rebuild the header and footer</td></tr>
+            <tr><td>Wednesday</td><td>CSS layout</td><td>Make the gallery a responsive grid</td></tr>
+            <tr><td>Friday</td><td>JavaScript events</td><td>Add one new interactive feature</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="content-section">
+    <h2>Projects and Skills</h2>
+    <p>Four things I have learned and built in this course. Filter by skill or search by keyword.</p>
+    <div class="filters" role="group" aria-label="Filter projects by skill">
+      <button type="button" class="chip on" data-tag="all" aria-pressed="true">All</button>
+      <button type="button" class="chip" data-tag="HTML" aria-pressed="false">HTML</button>
+      <button type="button" class="chip" data-tag="CSS" aria-pressed="false">CSS</button>
+      <button type="button" class="chip" data-tag="JavaScript" aria-pressed="false">JavaScript</button>
+      <label for="projSearch" style="position:absolute;left:-9999px">Search projects</label>
+      <input id="projSearch" type="search" placeholder="Search projects…" autocomplete="off">
+      <button type="button" class="chip" id="reset">Reset</button>
+    </div>
+    <p class="msg" id="projMsg" role="status"></p>
+    <div class="projects" id="projectList">
+      <article class="card" data-tag="HTML">
+        <span class="tag">HTML</span>
+        <h3>Semantic personal page</h3>
+        <p>Built my first page with header, nav, main, sections and footer.</p>
+        <button type="button" aria-expanded="false" aria-controls="d1">Show details</button>
+        <p id="d1" hidden>I learned why headings, lists, tables and labelled forms matter for structure and for screen-reader users.</p>
+      </article>
+      <article class="card" data-tag="CSS">
+        <span class="tag">CSS</span>
+        <h3>Responsive styling</h3>
+        <p>Styled the site with a colour palette, grid layouts and dark mode.</p>
+        <button type="button" aria-expanded="false" aria-controls="d2">Show details</button>
+        <p id="d2" hidden>I practised the box model, class and id selectors, hover and focus states, and media queries so the page fits phones.</p>
+      </article>
+      <article class="card" data-tag="JavaScript">
+        <span class="tag">JavaScript</span>
+        <h3>Form validation and preview</h3>
+        <p>Checks the contact form and shows a local preview without reloading.</p>
+        <button type="button" aria-expanded="false" aria-controls="d3">Show details</button>
+        <p id="d3" hidden>I learned event listeners, preventDefault(), regular expressions for email checks and updating the page with textContent.</p>
+      </article>
+      <article class="card" data-tag="HTML">
+        <span class="tag">HTML</span>
+        <h3>Photos, video and audio</h3>
+        <p>Added a captioned gallery, an introduction video and a voice clip.</p>
+        <button type="button" aria-expanded="false" aria-controls="d4">Show details</button>
+        <p id="d4" hidden>I used img with alt text, video and audio with controls, relative paths, and written summaries for accessibility.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="photos" class="content-section">
+    <h2>My Photos</h2>
+    <div class="viewer" id="viewer">
+      <figure>
+        <img src="images/photo1.jpg" alt="Smiling student in a light blue checked shirt and sunglasses standing beside a glass wall on campus" loading="lazy" width="1200" height="1300">
+        <figcaption><b>After Church</b>This picture was taken on one of the special sundays after church service at the ICT Center building.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo2.jpg" alt="Student in a black T-shirt and silver chain smiling with hands clasped in front, under a bright blue sky" loading="lazy" width="951" height="1800">
+        <figcaption><b>Sunny afternoon</b>A relaxed portrait outdoors after class.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo3.jpg" alt="Student in a black T-shirt and glasses standing with hands on hips in a dry grassy field" loading="lazy" width="814" height="1620">
+        <figcaption><b>Out in the field</b>Taking a break outside on a warm, dry day.</figcaption>
+      </figure>
+    </div>
+    <p class="note">All photos were taken by me or by friends who agreed to share them.</p>
+  </section>
+
+  <section id="media" class="content-section">
+    <h2>My Media</h2>
+    <div class="two">
+      <div>
+        <h3>Video introduction</h3>
+        <div class="player">
+          <video id="vid" controls preload="metadata" poster="images/photo1.jpg">
+            <source src="videos/intro.mp4" type="video/mp4">
+            Your browser does not support the video tag. Please read the summary below.
+          </video>
+        </div>
+        <p>"Every line of code is a step toward innovation;every website is an opportunity to change the world"</p>
+        <details open>
+          <summary>Written summary </summary>
+          <p>I introduce myself as Honesty Kabwe, a Computer Science student at Mulungushi University, and say that the web skill I hope to learn is web technologies.</p>
+        </details>
+      </div>
+      <div>
+        <h3>Audio clip</h3>
+        <audio id="aud" controls preload="none">
+          <source src="videos/voice.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <p>In this 23-second recording I introduce myself and share why I am studying web technologies. Press play to listen and pause at any time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="content-section">
+    <h2>Contact me :</h2>
+    <p><span class="badge">Browser demonstration only — no message is sent</span></p>
+    <form action="#" id="contactForm" novalidate>
+      <div><label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name" aria-describedby="nameErr"><span class="err" id="nameErr" role="alert"></span></div>
+      <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" aria-describedby="emailErr"><span class="err" id="emailErr" role="alert"></span></div>
+      <div><label for="topic">Topic</label>
+        <select id="topic" name="topic"><option>Say hello</option><option>Web project</option><option>Study group</option><option>Other</option></select></div>
+      <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required aria-describedby="msgErr"></textarea><span class="err" id="msgErr" role="alert"></span></div>
+      <button type="submit">Check and preview</button>
+      <p class="note">Your entries are only checked in your browser. Nothing is delivered, saved or posted anywhere.</p>
+    </form>
+    <div id="preview" role="status" tabindex="-1" hidden></div>
+  </section>
+</main>
+
+<footer>
+  <p><a href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noopener">View Source on GitHub</a> &nbsp;|&nbsp; <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener">MDN Learn Web Development</a></p>
+  <p>&copy; 2026 @HonestyKabwe</p>
+</footer>
+</body>
+</html>
